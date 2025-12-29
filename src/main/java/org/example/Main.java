@@ -4,14 +4,19 @@ package org.example;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+       create_thread_by_extending_javalang_thread_class cr = new create_thread_by_extending_javalang_thread_class();
+     //  cr.start();
+       //start method is callled to initiate a new thread.
+//-------------------------------------------------------------------------------------
+        Thread t1 = new Thread(cr);
+        t1.start();
+
+        //If your are creating thread by implementating runnabel, you need to create instramce of thread as well as
+
+        for(int i=0;i<10000;i++)
+        {
+            System.out.println("Hello");
         }
     }
 }
